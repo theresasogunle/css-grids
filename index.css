@@ -1,4 +1,7 @@
-body,html {height: 100%;}
+body,
+html {
+	height: 100%;
+}
 body {
 	margin: 0;
 	font-family: sans-serif;
@@ -67,19 +70,85 @@ img {
 }
 
 .sidebar {
-    grid-area: sidebar;
-    background-color: #1c9090;
-    color: #fff;
-    padding: 1em;
+	grid-area: sidebar;
+	background-color: #1c9090;
+	color: #fff;
+	padding: 1em;
 }
 
 .main {
-    grid-area: right;
-    grid-template-rows: 51px fit-content(30%);
+	grid-area: right;
+	grid-template-rows: 51px fit-content(30%) 40%;
     display: grid;
+    
 }
 
 footer {
-    grid-area: footer;
-    background: lightgray;
+	grid-area: footer;
+	background: lightgray;
+}
+
+#features {
+	display: grid;
+	grid-template-columns: repeat(5, auto);
+	
+	text-align: center;
+
+}
+
+#features i {
+	font-size: 2em;
+}
+
+ul#features {
+	margin: 0;
+	padding: 0;
+}
+
+ul#features li {
+	background-color: lightgray;
+    padding: 1em;
+    align-self: start;
+  
+}
+
+ul#features li p {
+	color: #4c4c4c;
+}
+ul#features li:nth-child(2){
+    background-color: orange;
+    align-self: center;
+}
+
+ul#features li:nth-child(4){
+    background-color: blue;
+    align-self: center;
+}
+
+section#info{
+    background-color: #f2f2f2;
+    padding: 2em;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: space-around;
+}
+
+#mountain-vector{
+    align-self: center;
+    width: 200px;
+}
+
+@media screen and (max-width: 600px){
+   
+}
+
+@media screen and (max-width: 40em){
+    .sidebar{
+        background-color: orange;
+    }
+}
+@media only screen and (max-width: 600px) {
+  .sidebar{
+        display: none;
+    }
 }
